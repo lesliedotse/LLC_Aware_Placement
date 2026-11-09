@@ -18,9 +18,9 @@ with modern PC based policies and evaluates it at cluster scale.**
 
 ## Research questions
 
-1. Does a stronger replacement policy (SHiP / Mockingjay vs LRU) reduce the
+1. Does a stronger replacement policy (SRRIP, DRRIP or SHiP vs LRU) reduce the
    benefit of cache aware workload placement in a cluster?
-2. How fair are these policies when cloud style workloads share an LLC?
+2. Does the answer hold across program regions and with hardware prefetchers on?
 3. How robust is cache aware placement when its slowdown estimates are wrong?
 
 ## How it works
@@ -224,17 +224,24 @@ python analysis/figures.py
 - [x] Threshold, job mix and cluster size sensitivity
 - [x] Second trace window per benchmark (all four policies)
 - [x] Prefetchers on, second window (all four policies)
-- [ ] Port Mockingjay to current ChampSim (stretch goal)
-- [x] Technical report (draft)
+- [x] Technical report
+
+## Future work
+
+- Port Mockingjay, the strongest published replacement policy, to the current
+  ChampSim and test it the same way.
+- Measure more program regions per benchmark, and window 1 with prefetchers on.
+- Add cloud workloads (CloudSuite) and a 4 core shared LLC configuration.
+- Compare placement with hardware cache partitioning (Intel CAT).
 
 ## Limitations
 
-Results come from simulation: a 2 core model with one shared LLC, one 50M
-instruction window per benchmark, 6 workloads, and a simplified cluster model
-where every job is one of those 6 programs, chosen uniformly. They show trends
-under these assumptions, not production cloud performance. The significance
-tests above are not corrected for the 18 policy comparisons made, so treat single
-borderline results with caution.
+Results come from simulation: a 2 core model with one shared LLC, two 50M
+instruction windows per benchmark, 6 workloads, and a simplified cluster model
+where every job is one of those 6 programs. They show trends under these
+assumptions, not production cloud performance. Policy comparisons are Holm
+corrected, but confidence intervals reflect noise in the cluster simulation,
+not measurement noise in ChampSim.
 
 ## License
 
