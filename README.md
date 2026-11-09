@@ -1,6 +1,6 @@
 # Does smarter cache replacement change how clouds should place workloads?
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24088293.svg)](https://doi.org/10.5281/zenodo.24088293)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24088292.svg)](https://doi.org/10.5281/zenodo.24088292)
 
 Independent research project by Leslie Dotse (2026).
 
@@ -248,8 +248,8 @@ not measurement noise in ChampSim.
 ## How to cite
 
 Dotse, L. (2026). LLC Aware Placement: Does Smarter Cache Replacement Change How
-Clouds Should Place Workloads? (v1.0.0). Zenodo.
-https://doi.org/10.5281/zenodo.24088293
+Clouds Should Place Workloads? Zenodo.
+https://doi.org/10.5281/zenodo.24088292
 
 ## License
 
