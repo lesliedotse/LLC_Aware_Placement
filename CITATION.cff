@@ -5,6 +5,7 @@ authors:
   - family-names: Dotse
     given-names: Leslie
 version: 1.0.0
+doi: 10.5281/zenodo.24088293
 date-released: 2026-11-09
 license: MIT
 repository-code: "https://github.com/lesliedotse/LLC_Aware_Placement"
