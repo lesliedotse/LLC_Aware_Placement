@@ -1,0 +1,11 @@
+{
+  "title": "LLC Aware Placement: Does Smarter Cache Replacement Change How Clouds Should Place Workloads?",
+  "upload_type": "software",
+  "description": "<p>Code, measured data and figures for a simulation study of how last level cache (LLC) replacement policies interact with cache aware workload placement in clouds. Pairwise corun slowdowns for six SPEC CPU 2017 workloads were measured in ChampSim under LRU, SRRIP, DRRIP and SHiP (324 simulations across two program regions, with and without hardware prefetchers) and fed into a discrete event model of a 50 server cluster.</p><p>Main findings: one streaming program causes most interference; refusing its few pairings cuts 95th percentile job slowdown from 1.69 to 1.25 for under 1% more servers; whether a smarter replacement policy shrinks or grows the value of placement depends on the program region and on prefetching.</p>",
+  "creators": [
+    {"name": "Dotse, Leslie"}
+  ],
+  "license": "MIT",
+  "keywords": ["computer architecture", "cache replacement", "last level cache", "cloud scheduling", "workload placement", "ChampSim", "SPEC CPU 2017"],
+  "version": "1.0.0"
+}
