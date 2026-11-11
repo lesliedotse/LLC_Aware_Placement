@@ -102,9 +102,12 @@ for speed, so always report `mean_busy_sockets` next to its slowdown.
 
 ## Results (first full run, October 2026)
 
-108 ChampSim simulations: 6 SPEC CPU 2017 workloads, alone and in all 21 pairs,
-under four LLC replacement policies (LRU, SRRIP, DRRIP, SHiP), with 20M warmup + 50M measured instructions per core on a
-2 core chip with a shared 2 MB LLC. Placement experiments: 50 sockets, 3000
+The study ran 324 ChampSim simulations in total: 108 on a first region of each
+program (the main results below), 108 on a second region, and 108 on the second
+region with hardware prefetchers on (see Robustness checks). Each set of 108 is
+6 SPEC CPU 2017 workloads, alone and in all 21 pairs, under four LLC
+replacement policies (LRU, SRRIP, DRRIP, SHiP), with 20M warmup + 50M measured
+instructions per core on a 2 core chip with a shared 2 MB LLC. Placement experiments: 50 sockets, 3000
 jobs per run, 10 seeds per setting, 95% confidence intervals. All numbers are
 in `results/figures/key_numbers.csv`.
 
